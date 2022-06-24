@@ -6,29 +6,29 @@ import 'package:otto_portfolio/provider/theme_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ServiceCard extends StatefulWidget {
-  final String serviceIcon;
-  final String? serviceTitle;
-  final String? serviceDescription;
+class ExperienceCard extends StatefulWidget {
+  final String iconPath;
+  final String? title;
+  final String? description;
   final double? cardWidth;
   final double? cardHeight;
   final Widget? cardBack;
 
-  const ServiceCard({
+  const ExperienceCard({
     Key? key,
-    required this.serviceIcon,
-    this.serviceTitle,
-    this.serviceDescription,
+    required this.iconPath,
+    this.title,
+    this.description,
     this.cardHeight,
     this.cardWidth,
     this.cardBack,
   }) : super(key: key);
 
   @override
-  ServiceCardState createState() => ServiceCardState();
+  ExperienceCardState createState() => ExperienceCardState();
 }
 
-class ServiceCardState extends State<ServiceCard> {
+class ExperienceCardState extends State<ExperienceCard> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   bool isHover = false;
   @override
@@ -108,9 +108,9 @@ class ServiceCardState extends State<ServiceCard> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                widget.serviceIcon,
+                widget.iconPath,
                 height: height * 0.125,
-                color: widget.serviceIcon == "assets/services/open.png"
+                color: widget.iconPath == ""
                     ? themeProvider.lightTheme
                         ? Colors.black
                         : Colors.white
@@ -120,7 +120,7 @@ class ServiceCardState extends State<ServiceCard> {
                 height: height * 0.02,
               ),
               Text(
-                widget.serviceTitle!,
+                widget.title!,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.roboto(
                   fontSize: height * 0.022,
@@ -129,23 +129,6 @@ class ServiceCardState extends State<ServiceCard> {
                   color: themeProvider.lightTheme ? Colors.black : Colors.white,
                 ),
               ),
-              // SizedBox(
-              //   height: height * 0.01,
-              // ),
-              // Expanded(
-              //   child: Text(
-              //     widget.serviceDescription,
-              //     textAlign: TextAlign.center,
-              //     style: GoogleFonts.montserrat(
-              //         color: _themeProvider.lightTheme
-              //             ? Colors.black
-              //             : Colors.white,
-              //         fontSize: height * 0.015,
-              //         letterSpacing: 2.0,
-              //         fontWeight: FontWeight.w200,
-              //         height: width < 900 ? 1.5 : 1.8),
-              //   ),
-              // )
             ],
           ),
         ),

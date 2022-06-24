@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:otto_portfolio/constants.dart';
+import 'package:otto_portfolio/widgets/cards/project_card.dart';
 import 'package:otto_portfolio/widgets/custom_button.dart';
 import 'package:otto_portfolio/widgets/custom_text_heading.dart';
-import 'package:otto_portfolio/widgets/project_card.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -28,13 +28,13 @@ class _PortfolioState extends State<Portfolio> {
           const CustomSectionHeading(text: "\nProjects"),
           SizedBox(height: 0.05 * height),
           Container(
-            height: height * 0.5,
+            height: height * 0.6,
             width: width * 0.9,
             margin: EdgeInsets.fromLTRB(0.01 * width, 0, 0.01 * width, 0),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: List.generate(
-                3,
+                4,
                 (index) => Container(
                   margin: EdgeInsets.all(
                     width * 0.02,
@@ -42,43 +42,15 @@ class _PortfolioState extends State<Portfolio> {
                   child: ProjectCard(
                     cardWidth: width < 1200 ? width * 0.3 : width * 0.35,
                     cardHeight: width < 1200 ? height * 0.32 : height * 0.32,
-                    projectIcon: kProjectsIcons[index],
-                    projectTitle: kProjectsTitles[index],
-                    projectDescription: kProjectsDescriptions[index],
-                    projectLink: kProjectsLinks[index],
+                    icon: kProjectsIcons[index],
+                    title: kProjectsTitles[index],
+                    description: kProjectsDescriptions[index],
+                    link: kProjectsLinks[index],
                   ),
                 ),
               ),
             ),
           ),
-          // SizedBox(
-          //   height: width > 1200 ? height * 0.45 : width * 0.21,
-          //   child: ListView.separated(
-          //     controller: scrollController,
-          //     padding: const EdgeInsets.symmetric(vertical: 20.0),
-          //     scrollDirection: Axis.horizontal,
-          //     separatorBuilder: (context, index) {
-          //       return VerticalDivider(
-          //         color: Colors.transparent,
-          //         width: width * 0.015,
-          //       );
-          //     },
-          //     itemBuilder: (context, index) {
-          //       return WidgetAnimator(
-          //         child: ProjectCard(
-          //           cardWidth: width < 1200 ? width * 0.3 : width * 0.35,
-          //           cardHeight: width < 1200 ? height * 0.32 : height * 0.32,
-          //           backImage: kProjectsBanner[index],
-          //           projectIcon: kProjectsIcons[index],
-          //           projectTitle: kProjectsTitles[index],
-          //           projectDescription: kProjectsDescriptions[index],
-          //           projectLink: kProjectsLinks[index],
-          //         ),
-          //       );
-          //     },
-          //     itemCount: 3,
-          //   ),
-          // ),
           SizedBox(
             height: height * 0.02,
           ),

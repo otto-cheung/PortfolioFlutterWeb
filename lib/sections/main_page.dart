@@ -63,7 +63,7 @@ class MainPageState extends State<MainPage> {
     if (i == 0) {
       return const Home();
     } else if (i == 1) {
-      return About();
+      return const About();
     } else if (i == 2) {
       return const Experience();
     } else if (i == 3) {

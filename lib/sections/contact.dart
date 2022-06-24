@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:otto_portfolio/animations/bottom_animation.dart';
 import 'package:otto_portfolio/constants.dart';
+import 'package:otto_portfolio/widgets/cards/contact_card.dart';
 import 'package:otto_portfolio/widgets/custom_text_heading.dart';
-import 'package:otto_portfolio/widgets/project_card.dart';
 
 class Contact extends StatelessWidget {
   const Contact({Key? key}) : super(key: key);
@@ -28,12 +28,12 @@ class Contact extends StatelessWidget {
               (index) => Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: WidgetAnimator(
-                  child: ProjectCard(
+                  child: ContactCard(
                     cardWidth: width < 1200 ? width * 0.25 : width * 0.2,
                     cardHeight: width < 1200 ? height * 0.28 : height * 0.25,
-                    projectIconData: kContactIcons[index],
-                    projectTitle: kContactTitles[index],
-                    projectDescription: kContactDetails[index],
+                    iconData: kContactIcons[index],
+                    title: kContactTitles[index],
+                    description: kContactDetails[index],
                   ),
                 ),
               ),

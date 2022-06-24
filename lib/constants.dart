@@ -61,23 +61,27 @@ final kProjectsIcons = [
   "assets/images/github.png",
   "assets/images/leklekpig.png",
   "assets/images/minigames.png",
+  "assets/images/portfolio.png"
 ];
 
 final kProjectsTitles = [
   "My github repo",
   "Lek Lek Pig",
   "Mini Games",
+  "My portfolio"
 ];
 
 final kProjectsDescriptions = [
   "Here's is my GitHub repo. You can view my projects and codes here. As some projects are co-worked, they may not be visible in my GitHub.",
   "LekLek Pig is a portfolio management app for children to build their protfolio easily and export as PDF for interviews in Hong Kong primary schools.",
   "Application of a game app for chill. A timer can be set to alert you when your rest time is up. Google ML vision, camera and REST APIs are used. ",
+  "This portfolio website is made with Flutter Web, and deployed using Firebase hosting."
 ];
 
 final kProjectsLinks = [
   "https://github.com/otto-cheung/",
   "https://apps.apple.com/hk/app/leklek-pig-%E5%8F%BB%E5%8F%BB%E8%B1%AC/id1524737635?l=en",
+  "https://github.com/otto-cheung/mini-games",
   "https://github.com/otto-cheung/mini-games",
 ];
 

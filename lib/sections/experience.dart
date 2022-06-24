@@ -2,7 +2,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:otto_portfolio/provider/theme_provider.dart';
 import 'package:otto_portfolio/widgets/custom_text_heading.dart';
-import 'package:otto_portfolio/widgets/experience_card.dart';
+import 'package:otto_portfolio/widgets/cards/experience_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otto_portfolio/constants.dart';
 import 'package:provider/provider.dart';
@@ -35,12 +35,12 @@ class ExperienceState extends State<Experience> {
             alignment: WrapAlignment.center,
             children: List.generate(
               kExpTitle.length,
-              (index) => ServiceCard(
+              (index) => ExperienceCard(
                 cardWidth: width < 1200 ? width * 0.25 : width * 0.22,
                 cardHeight: width < 1200 ? height * 0.37 : height * 0.35,
-                serviceIcon: kExpIcons[index],
-                serviceTitle: kExpTitle[index],
-                serviceDescription: kExpDesc[index],
+                iconPath: kExpIcons[index],
+                title: kExpTitle[index],
+                description: kExpDesc[index],
                 cardBack: SkillSetCardBackWidget(
                   serviceTitle: kExpTitle[index],
                   serviceDesc: kExpDesc[index],

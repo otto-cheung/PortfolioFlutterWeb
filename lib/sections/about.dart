@@ -4,7 +4,7 @@ import 'package:otto_portfolio/provider/theme_provider.dart';
 import 'package:otto_portfolio/widgets/about_widget.dart';
 import 'package:otto_portfolio/widgets/adaptive_text.dart';
 import 'package:otto_portfolio/widgets/custom_text_heading.dart';
-import 'package:otto_portfolio/widgets/tech_widget.dart';
+import 'package:otto_portfolio/widgets/skill_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -43,7 +43,7 @@ class About extends StatelessWidget {
                       AdaptiveText(
                         "Who am I?",
                         style: GoogleFonts.montserrat(
-                            color: kPrimaryColor, fontSize: height * 0.04),
+                            color: kPrimaryColor, fontSize: height * 0.03),
                       ),
                       SizedBox(
                         height: height * 0.03,
@@ -51,7 +51,7 @@ class About extends StatelessWidget {
                       AdaptiveText(
                         selfIntro,
                         style: GoogleFonts.montserrat(
-                          fontSize: height * 0.035,
+                          fontSize: height * 0.022,
                           fontWeight: FontWeight.w400,
                           color: themeProvider.lightTheme
                               ? Colors.black
@@ -90,24 +90,16 @@ class About extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                             color: kPrimaryColor, fontSize: height * 0.03),
                       ),
-                      Container(
+                      SizedBox(
                         width: width,
                         height: height * 0.15,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: List.generate(kTech.length, (i) {
-                            return ToolTechWidget(
+                            return SkillWidget(
                               techName: kTech[i],
                             );
                           }),
-                          // child: Row(
-                          //   children: [
-                          //     for (int i = 0; i < kTools.length; i++)
-                          //       ToolTechWidget(
-                          //         techName: kTools[i],
-                          //       ),
-                          //   ],
-                          // ),
                         ),
                       ),
                       SizedBox(

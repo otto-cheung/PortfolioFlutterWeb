@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:otto_portfolio/provider/theme_prefs.dart';
 
+// Provider for changes of themes
+
 class ThemeProvider extends ChangeNotifier {
   ThemePreference darkThemePref = ThemePreference();
   ScrollController scrollController = ScrollController();

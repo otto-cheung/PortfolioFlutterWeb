@@ -34,21 +34,19 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^2.0.0
-  url_launcher: ^6.1.2
   responsive_builder: ^0.4.1
   carousel_slider: ^4.0.0
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
-  universal_html: ^2.0.4
   http: ^0.13.1
-  flutter_html: any
+  url_launcher: ^6.1.4
   url_strategy: ^0.2.0
   provider: ^6.0.1
   shared_preferences: ^2.0.6
   flip_card: ^0.6.0
   responsive_framework: ^0.1.9
 
-  # 3d model
+  # 3D model
   model_viewer_plus: ^1.2.0
 
   mailto: ^2.0.0
@@ -76,10 +74,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
-    - assets/services/
     - assets/3Dmodel/
     - assets/3Dmodel/textures/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

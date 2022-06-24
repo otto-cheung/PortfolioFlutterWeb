@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:otto_portfolio/provider/theme_provider.dart';
 import 'package:otto_portfolio/provider/theme_styles.dart';
-import 'package:otto_portfolio/sections/main_section.dart';
+import 'package:otto_portfolio/sections/main_page.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,17 +38,7 @@ class MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
       ],
       child: MaterialApp(
-        // builder: (context, child) => ResponsiveWrapper.builder(
-        //   child,
-        //   maxWidth: 1200,
-        //   minWidth: 480,
-        //   defaultScale: true,
-        //   breakpoints: [
-        //     ResponsiveBreakpoint.resize(480, name: MOBILE),
-        //     ResponsiveBreakpoint.autoScale(800, name: TABLET),
-        //     ResponsiveBreakpoint.resize(1000, name: DESKTOP),
-        //   ],
-        // ),
+        title: "Otto's Portfolio",
         debugShowCheckedModeBanner: false,
         theme: ThemeStyles.themeData(
           _themeProvider.lightTheme,

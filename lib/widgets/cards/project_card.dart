@@ -93,7 +93,8 @@ class ProjectCardState extends State<ProjectCard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: width * 0.08,
+                    height: widget.cardHeight! / 3,
+                    width: widget.cardWidth,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(
@@ -105,14 +106,6 @@ class ProjectCardState extends State<ProjectCard> {
                                 : Colors.white
                             : null),
                   ),
-
-                  // Image.asset(widget.icon!,
-                  //     height: width * 0.1,
-                  //     color: (widget.icon == null)
-                  //         ? themeProvider.lightTheme
-                  //             ? Colors.black
-                  //             : Colors.white
-                  //         : null),
                   SizedBox(
                     height: height * 0.02,
                   ),
@@ -129,18 +122,24 @@ class ProjectCardState extends State<ProjectCard> {
                     ),
                   ),
                   SizedBox(
-                    height: height * 0.05,
+                    height: widget.cardHeight! * 0.1,
                   ),
-                  AdaptiveText(
-                    widget.description!,
-                    style: GoogleFonts.roboto(
-                      fontSize: height * 0.017,
-                      letterSpacing: 2.0,
-                      fontWeight: FontWeight.normal,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
-                    ),
+                  SizedBox(
+                    height: widget.cardHeight! * 0.5,
+                    width: widget.cardWidth,
+                    child: ListView(scrollDirection: Axis.vertical, children: [
+                      AdaptiveText(
+                        widget.description!,
+                        style: GoogleFonts.roboto(
+                          fontSize: height * 0.017,
+                          letterSpacing: 2.0,
+                          fontWeight: FontWeight.normal,
+                          color: themeProvider.lightTheme
+                              ? Colors.black
+                              : Colors.white,
+                        ),
+                      ),
+                    ]),
                   )
                 ],
               ),

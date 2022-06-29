@@ -79,14 +79,23 @@ class SkillSetCardBackWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          serviceDesc,
-          style: GoogleFonts.montserrat(
-            color: _themeProvider.lightTheme ? Colors.black : Colors.white,
-            fontSize: height * 0.015,
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.w400,
-            height: width < 900 ? 1.5 : 1.8,
+        SizedBox(
+          height: height * 0.3,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              Text(
+                serviceDesc,
+                style: GoogleFonts.montserrat(
+                  color:
+                      _themeProvider.lightTheme ? Colors.black : Colors.white,
+                  fontSize: height * 0.015,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.w400,
+                  height: width < 900 ? 1.5 : 1.8,
+                ),
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 10.0),

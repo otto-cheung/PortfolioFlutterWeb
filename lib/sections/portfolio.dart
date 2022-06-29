@@ -40,7 +40,7 @@ class _PortfolioState extends State<Portfolio> {
                     width * 0.02,
                   ),
                   child: ProjectCard(
-                    cardWidth: width < 1200 ? width * 0.3 : width * 0.35,
+                    cardWidth: width < 1200 ? 300 : width * 0.35,
                     cardHeight: width < 1200 ? height * 0.32 : height * 0.32,
                     icon: kProjectsIcons[index],
                     title: kProjectsTitles[index],

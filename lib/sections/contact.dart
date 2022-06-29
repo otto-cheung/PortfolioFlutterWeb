@@ -18,7 +18,7 @@ class Contact extends StatelessWidget {
       child: Column(
         children: [
           const CustomSectionHeading(
-            text: "\nGet in Touch",
+            text: "\nContact",
           ),
           SizedBox(height: 0.05 * height),
           Row(

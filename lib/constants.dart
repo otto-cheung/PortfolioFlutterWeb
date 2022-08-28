@@ -59,6 +59,7 @@ final kExpDesc = [
 // Projects
 final kProjectsIcons = [
   "assets/images/github.png",
+  "assets/images/recipeapp.png",
   "assets/images/leklekpig.png",
   "assets/images/minigames.png",
   "assets/images/portfolio.png"
@@ -66,6 +67,7 @@ final kProjectsIcons = [
 
 final kProjectsTitles = [
   "My github repo",
+  "Recipe App",
   "Lek Lek Pig",
   "Mini Games",
   "My portfolio website"
@@ -73,6 +75,7 @@ final kProjectsTitles = [
 
 final kProjectsDescriptions = [
   "Here's is my GitHub repo. You can view my projects and codes here. As some projects are co-worked, they may not be visible in my GitHub.",
+  "Recipe App is a mobile app for people to view recipes and cooking ideas",
   "LekLek Pig is a published portfolio management app for children to build their protfolio easily and export as PDF for interviews in Hong Kong primary schools.",
   "Application of a game app for chill. A timer can be set to alert you when your rest time is up. Google ML vision, camera and REST APIs are used. ",
   "This portfolio website is made with Flutter Web, and deployed using Firebase hosting."
@@ -80,6 +83,7 @@ final kProjectsDescriptions = [
 
 final kProjectsLinks = [
   "https://github.com/otto-cheung/",
+  "https://github.com/otto-cheung/FlutetrRecipeApp/",
   "https://apps.apple.com/hk/app/leklek-pig-%E5%8F%BB%E5%8F%BB%E8%B1%AC/id1524737635?l=en",
   "https://github.com/otto-cheung/FlutterMiniGames",
   "https://github.com/otto-cheung/PortfolioFlutterWeb"

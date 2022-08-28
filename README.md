@@ -4,5 +4,5 @@ A Flutter Web project for portfolio.
 
 ## Features
 
-- Responsive with mobile sizes
+- Responsive with mobile devices
 - Deployed using Firebase
